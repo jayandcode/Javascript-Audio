@@ -2,6 +2,8 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 *:focus {
   outline: none;
@@ -16,7 +18,13 @@ body {
   align-items: center;
   margin: 0px;
   padding: 0px;
+  font-family: 'Roboto', sans-serif;
   background-color: rgba(231, 76, 60,0.8);
+}
+.responsive-img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
 .phone-wrapper {
    display: grid;
@@ -56,8 +64,9 @@ body {
   right: 0px;
   left: 0px;
   bottom: 0px;
-  background-color: rgba(47, 54, 64,0.8);
+  background-color: rgba(47, 54, 64,1);
   transition: transform 0.3s ease-in-out;
+  z-index: 5;
 }
 
 .numbers {
@@ -80,6 +89,49 @@ body {
 }
 .number[value="0"] {
   grid-area: 4 / 2 / span 1 / span 1;
+}
+.audio-wrapper {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  padding: 15px;
+  background:  linear-gradient(to bottom, #ec6f66, #282828);
+}
+.audio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr  ;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: transparent;
+}
+.audio-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 10px;
+}
+.title h4 {
+ color: white;
+ font-weight: 600;
+ font-size: 18px;
+ letter-spacing: .2em;
+}
+.title span {
+  color: #bdc3c7;
+  letter-spacing: .2em;
+  font-size: 12px;
+}
+.controlUI {
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+}
+.play {
+ font-size: 20px;
 }
 .navigation {
   width: 30px;
