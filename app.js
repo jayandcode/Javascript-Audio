@@ -34,3 +34,28 @@ function audioInit(array) {
  <span>${currentValue.artist}</span>
 </div>`
 }
+
+const playBtn = document.querySelector(".play").addEventListener("click",function(){
+   let newAudio = document.createElement("audio");
+   newAudio.setAttribute("src", songs[current].audioFile);
+});
+const nextBtn = document.querySelector(".next").addEventListener("click",function(){
+  if(current === songs.length -1){
+    current = -1;
+    current ++;
+  }
+  else {
+    current ++;
+  }
+  audioInit(songs);
+});
+const prevBtn = document.querySelector(".previous").addEventListener("click",function(){
+  if(current === 0){
+    current = songs.length;
+    current --;
+  }
+  else {
+    current --;
+  }
+  audioInit(songs);
+});

@@ -1,9 +1,9 @@
-const songs = [
+var songs = [
 		{
 			title: "rockstar",
 			artist: "Post Malone, 21 Savage",
 			cover: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/rockstar-album-cover.jpg",
-			audioFile: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Post%20Malone%20-%20rockstar%20ft.%2021%20Savage%20.mp3",
+  			audioFile: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Post%20Malone%20-%20rockstar%20ft.%2021%20Savage%20(1).mp3",
 			color: "#c3af50"
 		},
 		{
