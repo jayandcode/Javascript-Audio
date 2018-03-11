@@ -16,3 +16,21 @@ buttons.forEach(function(btn){
     }
   });
 });
+
+// display songs
+const audioContent = document.querySelector(".audio-content");
+let current = 0;
+
+audioInit(songs);
+
+function audioInit(array) {
+	let currentValue = array[current];
+	audioContent.innerHTML = `
+ <div class="audio-img">
+   <img src="${currentValue.cover}" alt="" class="responsive-img">
+ </div>
+ <div class="title">
+ <h4>${currentValue.title}</h4>
+ <span>${currentValue.artist}</span>
+</div>`
+}
