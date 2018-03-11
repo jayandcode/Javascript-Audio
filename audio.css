@@ -3,6 +3,9 @@
 *:after {
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}
 body,
 html {
   width: 100%;
@@ -42,6 +45,7 @@ body {
 .screen {
   position: relative;
   background-color: rgba(47, 54, 64,0.8);
+  overflow: hidden;
 }
 .login {
   position: absolute;
@@ -53,13 +57,16 @@ body {
   left: 0px;
   bottom: 0px;
   background-color: rgba(47, 54, 64,0.8);
+  transition: transform 0.3s ease-in-out;
 }
+
 .numbers {
   width: 80%;
   margin: auto;
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(4,1fr);
   grid-gap: 1em;
 }
 .number {
@@ -69,6 +76,9 @@ body {
   border: 1px solid white;
   background-color: transparent;
   color: white;
+}
+.number[value="0"] {
+  grid-area: 4 / 2 / span 1 / span 1;
 }
 .navigation {
   width: 30px;
