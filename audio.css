@@ -76,6 +76,7 @@ body {
   border: 1px solid white;
   background-color: transparent;
   color: white;
+  cursor: pointer;
 }
 .number[value="0"] {
   grid-area: 4 / 2 / span 1 / span 1;
