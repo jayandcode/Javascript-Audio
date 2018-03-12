@@ -44,7 +44,7 @@ function playSong(){
 }
 // check whether the song is already playing
 const playBtn = document.querySelector(".play").addEventListener("click",function(){
-  const btnImg = this.querySelector("img");  
+  const btnImg = this.querySelector("img");
    if(song.paused){
       song.play();
       btnImg.setAttribute("src", "pause.png");
@@ -55,6 +55,12 @@ const playBtn = document.querySelector(".play").addEventListener("click",functio
    }
 });
 
+song.addEventListener("timeupdate", function(){
+  let dot = document.querySelector(".dot");
+  let position = song.currentTime / song.duration;
+
+  dot.style.width = position * 100 + "%";
+});
 
 const nextBtn = document.querySelector(".next").addEventListener("click",function(){
   if(current === songs.length -1){

@@ -143,20 +143,15 @@ body {
   margin: auto;
 }
 .bar {
-  position: relative;
   width: 100%;
   height: 100%;
   background-color: #bdc3c7;
   border-radius: 20px;
 }
 .dot {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: white;
+  width: 5px;
+  height: 100%;
+  background-color: #c0392b;
   z-index: 1;
 }
 .navigation {
