@@ -44,8 +44,7 @@ function playSong(){
 }
 // check whether the song is already playing
 const playBtn = document.querySelector(".play").addEventListener("click",function(){
-  const btnImg = this.querySelector("img");
-  
+  const btnImg = this.querySelector("img");  
    if(song.paused){
       song.play();
       btnImg.setAttribute("src", "pause.png");
