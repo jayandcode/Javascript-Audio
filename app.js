@@ -11,6 +11,8 @@ buttons.forEach(function(btn){
          input += btnVal;
          if(input === password){
            login.style.transform = "translateX(100%)";
+		 // play song on load
+		 playSong();
          }
       }
     }
@@ -34,8 +36,7 @@ function audioInit(array) {
  <h4>${currentValue.title}</h4>
  <span>${currentValue.artist}</span>
 </div>`
-// play song on load
-playSong();
+
 }
 // play song on load
 function playSong(){
