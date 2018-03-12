@@ -127,6 +127,11 @@ body {
   letter-spacing: .2em;
   font-size: 12px;
 }
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .controlUI {
   margin: 10px;
   cursor: pointer;
