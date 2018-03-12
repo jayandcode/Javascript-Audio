@@ -20,6 +20,7 @@ buttons.forEach(function(btn){
 // display songs
 const audioContent = document.querySelector(".audio-content");
 let current = 0;
+let song = new Audio();
 
 audioInit(songs);
 
@@ -33,12 +34,25 @@ function audioInit(array) {
  <h4>${currentValue.title}</h4>
  <span>${currentValue.artist}</span>
 </div>`
+// play song on load
+playSong();
 }
-
+// play song on load
+function playSong(){
+  song.setAttribute("src", songs[current].audioFile);
+  song.play();
+}
+// check whether the song is already playing
 const playBtn = document.querySelector(".play").addEventListener("click",function(){
-   let newAudio = document.createElement("audio");
-   newAudio.setAttribute("src", songs[current].audioFile);
+   if(song.paused){
+     song.play();
+   }
+   else {
+     song.pause();
+   }
 });
+
+
 const nextBtn = document.querySelector(".next").addEventListener("click",function(){
   if(current === songs.length -1){
     current = -1;
